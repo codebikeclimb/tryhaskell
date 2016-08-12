@@ -392,16 +392,12 @@ bodyFooter :: Html ()
 bodyFooter =
   footer_ (container_ (row_ (span12_ (p_ [class_ "muted credit"] links))))
   where links =
-          do a_ [href_ "http://github.com/chrisdone/tryhaskell"] "Try Haskell"
-             " by "
-             a_ [href_ "http://twitter.com/christopherdone"] "@christopherdone"
-             ", concept inspired by "
-             a_ [href_ "http://tryruby.org/"] "Try Ruby"
-             ", Haskell evaluator powered by Gwern Branwen's "
-             a_ [href_ "http://hackage.haskell.org/package/mueval"] "Mueval"
-             ",  and console by "
-             a_ [href_ "http://github.com/chrisdone/jquery-console"] "jquery-console"
-             "."
+          do "Try "
+             a_ [href_ "https://haskell-lang.org/"] "Haskell"
+             " in your browser! "
+             "An interactive tutorial by "
+             a_ [href_ "http://chrisdone.com"] "Chris Done"
+
 
 -- | Scripts; jquery, console, tryhaskell, ga, the usual.
 scripts :: Html ()
